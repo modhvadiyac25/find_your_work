@@ -1,80 +1,81 @@
 <html>
-    <head>
-        <title>Employee login</title>
-    </head>
-    <body>
-        <header align="center">
-            <h1>Find your Work</h1>
-            <div>
-                <a href="emp_prifile.html"><h3>Profile</h3></a>
-            </div>
-           <div>
-               <hr>
-            <nav>
-            <div>
-                <a href="emp_index.html">Home</a>&nbsp;
-                <a href="emp_work.html">Tack Work</a>&nbsp;
-                <a href="emp_contactus.html">Contact Us</a>&nbsp;
-                <a href="emp_aboutus.html">about Us</a>&nbsp;
-                <a href="emp_login.html">login</a>
-                <a href="emp_signup.html">sign up</a>
-                <a href="emp_logout.html">Log out</a>&nbsp;
-            </div>
-            </nav>
-            <hr>
-           </div>
-        </header>
-        <div align="center">
-            <form method="#">
-                <table border="2">
-                    <tr align="center">
-                        <th colspan="2">Employee sign up</th>
-                    </tr>
-                    <tr>
-                        <td>First name : </td>
-                        <td><input type="text" name="emp_fname" required/></td>
-                    </tr>
-                    <tr>
-                        <td>Middle name : </td>
-                        <td><input type="text" name="emp_mname" required/></td>
-                    </tr>
-                    <tr>
-                        <td>Last name : </td>
-                        <td><input type="text" name="emp_lname" required/></td>
-                    </tr>
-                    <tr>
-                        <td>Address : </td>
-                        <td><input type="text" name="emp_address" required/></td>
-                    </tr>
-                    <tr>
-                        <td>Mobile no. : </td>
-                        <td><input type="tel" name="emp_tel" required/></td>
-                    </tr>
 
-                    <tr>
-                        <td>Email : </td>
-                        <td><input type="text" name="emp_email" required/></td>
-                    </tr>
-                    <tr>
-                        <td>Password : </td>
-                        <td><input type="password" name="password"></td>
-                    </tr>
-                    <tr>
-                        <td>Confirm Password : </td>
-                        <td><input type="password" name="password"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="submit" name="submit" value="Sign up"/>
-                            &nbsp;&nbsp;
-                            <input type="reset" value="reset"/>
-                        </td>
-                    </tr>
-                </table>
-                <br>
-                <button><a href="./../redirect.html">Navigation page</a></button>
-            </form>
-        </div>
-    </body>
+<head>
+    <title>Employee login</title>
+    <link rel="stylesheet" type="text/css" href="./css/general.css">
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align: center;">Find your Work</h1>
+    </header>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="emp_index.html">Home</a></li>
+                <li><a href="emp_work.html">Tack Work</a></li>
+                <li><a href="emp_contactus.html">Contact Us</a></li>
+                <li><a href="emp_aboutus.html">about Us</a></li>
+                <li><a href="emp_profile.html ">Profile</a></li>
+                <li><a class="active" href="emp_login.html">login</a></li>
+                <li><a href="emp_signup.html">sign up</a></li>
+                <li><a href="emp_logout.html">Log out</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br>
+
+    <div align="center">
+        <form method="#">
+            <table style="outline:auto;">
+                <tr align="center">
+                    <th colspan="2">Employee sign up</th>
+                </tr>
+                <tr>
+                    <td>First name : </td>
+                    <td><input type="text" name="emp_fname" required/></td>
+                </tr>
+                <tr>
+                    <td>Middle name : </td>
+                    <td><input type="text" name="emp_mname" required/></td>
+                </tr>
+                <tr>
+                    <td>Last name : </td>
+                    <td><input type="text" name="emp_lname" required/></td>
+                </tr>
+                <tr>
+                    <td>Address : </td>
+                    <td><input type="text" name="emp_address" required/></td>
+                </tr>
+                <tr>
+                    <td>Mobile no. : </td>
+                    <td><input type="tel" name="emp_tel" required/></td>
+                </tr>
+
+                <tr>
+                    <td>Email : </td>
+                    <td><input type="text" name="emp_email" required/></td>
+                </tr>
+                <tr>
+                    <td>Password : </td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password : </td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="submit" name="submit" value="Sign up" /> &nbsp;&nbsp;
+                        <input type="reset" value="reset" />
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <button><a href="./../redirect.html">Navigation page</a></button>
+        </form>
+    </div>
+</body>
+
 </html>
