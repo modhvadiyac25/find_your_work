@@ -5,10 +5,30 @@
     <link rel="stylesheet" type="text/css" href="./css/general.css">
 </head>
 <style>
-
+    footer {
+        display: none;
+    }
+    
+    #image {
+        background-image: url(./images/emp_home_bg.jpg);
+        background-size: cover;
+        opacity: 1.5;
+    }
+    
+    .text_color {
+        color: #ffffff;
+    }
+    
+    button {
+        color: white;
+        margin: 10px;
+        background-color: black;
+        height: 35px;
+        width: 25%;
+    }
 </style>
 
-<body>
+<body id="image">
     <header>
         <h1 style="text-align: center;">Find your Work</h1>
     </header>
@@ -26,9 +46,16 @@
             </ul>
         </nav>
     </div>
-    <h1>Welcome ! to the Fyw</h1>
-    <p>This is employee page</p>
-    <br><br><br>
+    <!--
+ <div id="text">
+        <h1>Welcome ! to the Fyw</h1>
+        <p>This is employee page</p>
+        <br><br><br>
+    </div>
+   -->
+    <button type="submit" id="home_btn" onclick="showcontent()">Click here</button>
+    <h1 class="text_color" id="welcome"></h1>
+    <p class="text_color" id="page"></p>
     <footer>
         <div>
             <div>
@@ -47,5 +74,6 @@
     </footer>
     </div>
 </body>
+<script src="./js/general.js"></script>
 
 </html>

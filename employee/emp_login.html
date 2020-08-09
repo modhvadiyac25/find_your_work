@@ -31,7 +31,6 @@
             background-color: grey;
             height: 35px;
             width: 100%;
-            display: ;
         }
         
         form {
@@ -78,16 +77,16 @@
                 </tr>
                 <tr>
                     <td> Email : </td>
-                    <td><input type="text" name="username" required/></td>
+                    <td><input type="text" name="username" id="username" required/></td>
                 </tr>
                 <tr>
                     <td>Password : </td>
-                    <td><input type="password" name="password"></td>
+                    <td><input type="password" name="password" id="password" required></td>
                 </tr>
                 <tr>
                     <td colspan="2">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="submit" name="submit" value="Log in" /> &nbsp;&nbsp;
+                        <input type="submit" onclick="login()" name="submit" value="Log in" /> &nbsp;&nbsp;
                     </td>
                 </tr>
             </table>
@@ -97,5 +96,8 @@
         </form>
     </div>
 </body>
+
+<script src="./js/general.js">
+</script>
 
 </html>

@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Employee login</title>
+    <title>Employee Sign up</title>
     <link rel="stylesheet" type="text/css" href="./css/general.css">
 </head>
 <style>
@@ -11,14 +11,15 @@
         opacity: 1.5;
     }
     
-    table {
+    table.active {
         height: 100px;
         width: 100%;
         background-color: white;
     }
     
     input[type=text],
-    [type=password] {
+    [type=password],
+    [type=tel] {
         background: transparent;
         box-sizing: initial;
         line-height: 0.5;
@@ -32,7 +33,6 @@
         background-color: grey;
         height: 35px;
         width: 100%;
-        display: ;
     }
     
     th {
@@ -41,7 +41,7 @@
     
     form {
         background-color: #f2f2f2;
-        height: 70%;
+        height: 100%;
         width: 30%;
         border-radius: 10px;
         opacity: 0.5;
@@ -52,7 +52,7 @@
     }
 </style>
 
-<body>
+<body id="image">
     <header>
         <h1 style="text-align: center;">Find your Work</h1>
     </header>
@@ -74,34 +74,36 @@
 
     <div align="center">
         <form method="#">
-            <table style="outline:auto;">
-                <tr align="center">
-                    <th colspan="2">Employee sign up</th>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <h3 align="center">Employee sign up</h3>
+                    </td>
                 </tr>
                 <tr>
                     <td>First name : </td>
-                    <td><input type="text" name="emp_fname" required/></td>
+                    <td><input type="text" name="emp_fname" /></td>
                 </tr>
                 <tr>
                     <td>Middle name : </td>
-                    <td><input type="text" name="emp_mname" required/></td>
+                    <td><input type="text" name="emp_mname" /></td>
                 </tr>
                 <tr>
                     <td>Last name : </td>
-                    <td><input type="text" name="emp_lname" required/></td>
+                    <td><input type="text" name="emp_lname" /></td>
                 </tr>
                 <tr>
                     <td>Address : </td>
-                    <td><input type="text" name="emp_address" required/></td>
+                    <td><input type="text" name="emp_address" /></td>
                 </tr>
                 <tr>
                     <td>Mobile no. : </td>
-                    <td><input type="tel" name="emp_tel" required/></td>
+                    <td><input type="tel" name="emp_tel" /></td>
                 </tr>
 
                 <tr>
                     <td>Email : </td>
-                    <td><input type="text" name="emp_email" required/></td>
+                    <td><input type="text" name="emp_email" /></td>
                 </tr>
                 <tr>
                     <td>Password : </td>
@@ -114,8 +116,8 @@
                 <tr>
                     <td colspan="2">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="submit" name="submit" value="Sign up" /> &nbsp;&nbsp;
-                        <input type="reset" value="reset" />
+                        <input type="submit" onclick="signup()" name="submit" value="Sign up" /> &nbsp;&nbsp;
+
                     </td>
                 </tr>
             </table>
@@ -124,5 +126,12 @@
         </form>
     </div>
 </body>
+<script>
+    function signup() {
+        window.alert("registration sucessfully !!");
+    }
+</script>
+<script src="./js/general.js">
+</script>
 
 </html>

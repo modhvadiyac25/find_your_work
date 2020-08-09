@@ -5,10 +5,26 @@
     <link rel="stylesheet" type="text/css" href="./css/general.css">
 </head>
 <style>
-
+    #image {
+        background-image: url(./images/profile_bg.jpg);
+        background-size: cover;
+        opacity: 1.5;
+    }
+    
+    footer {
+        display: none;
+    }
+    
+    button {
+        color: white;
+        margin: 10px;
+        background-color: black;
+        height: 35px;
+        width: 25%;
+    }
 </style>
 
-<body>
+<body id="image">
     <header>
         <h1 style="text-align: center;">Find your Work</h1>
     </header>
@@ -26,7 +42,14 @@
             </ul>
         </nav>
     </div>
-    <h1>Profile page is on construction !!</h1>
+    <button type="submit" onclick="showProfile()">Click here</button>
+
+    <div id="profile">
+        <h1 id="name"></h1>
+        <h3 id="mobile"></h3>
+        <h3 id="addr"></h3>
+    </div>
+
     <br>
     <br>
     <footer>
@@ -59,5 +82,6 @@
     </footer>
     </div>
 </body>
+<script src="./js/general.js"></script>
 
 </html>

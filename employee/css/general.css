@@ -1,11 +1,18 @@
 header {}
 
 footer {
+    color: white;
+}
+
+input[type=submit] {
+    background-color: grey;
+    height: 35px;
+    width: 100%;
 }
 
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: #b3ffb3;
+    background-color: ;
 }
 
 ul {
