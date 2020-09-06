@@ -3,64 +3,108 @@
 <head>
     <title>Employee work</title>
     <link rel="stylesheet" type="text/css" href="./css/general.css">
+    <link rel="stylesheet" type="text/css" herf="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+        
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+        
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <h1 style="text-align: center;">Find your Work</h1>
     </header>
-    <div>
-        <nav>
-            <ul>
-                <li><a href="emp_index.html">Home</a></li>
-                <li><a class="active" href="emp_work.html">Tack Work</a></li>
-                <li><a href="emp_contactus.html">Contact Us</a></li>
-                <li><a href="emp_aboutus.html">about Us</a></li>
-                <li><a href="emp_profile.html ">Profile</a></li>
-                <li><a href="emp_login.html">login</a></li>
-                <li><a href="emp_signup.html">sign up</a></li>
-                <li><a href="emp_logout.html">Log out</a></li>
-            </ul>
+    <div class="container-fluid">
+        <nav class="nav flex-column">
+            <div class="col-sm-12">
+                <ul>
+                    <li><a class="nav-link" href="emp_index.html">Home</a></li>
+                    <li><a class="nav-link active" href="emp_work.html">Tack Work</a></li>
+                    <li><a class="nav-link" href="emp_contactus.html">Contact Us</a></li>
+                    <li><a class="nav-link" href="emp_aboutus.html">about Us</a></li>
+                    <li><a class="nav-link" href="emp_profile.html ">Profile</a></li>
+                    <li><a class="nav-link" href="emp_login.html">login</a></li>
+                    <li><a class="nav-link" href="emp_signup.html">sign up</a></li>
+                    <li><a class="nav-link" href="emp_logout.html">Log out</a></li>
+                </ul>
+            </div>
+
         </nav>
     </div>
     <br>
-    <table border="0" style="outline: auto;">
-        <tr>
-            <th>No.</th>
-            <th>task master</th>
-            <th> Description</th>
-            <th>cost</th>
-            <th>Make request</th>
-        </tr>
-        <tr>
-            <td>1.</td>
-            <td>smit patel</td>
-            <td>data entry of library visiters</td>
-            <td>1000rs.</td>
-            <td><input type="submit" name="make_req" value="Request"></td>
-        </tr>
-        <tr>
-            <td>2.</td>
-            <td>sandip patel</td>
-            <td>html template for the school management system</td>
-            <td>2000rs.</td>
-            <td><input type="submit" name="make_req" value="Request"></td>
-        </tr>
-        <tr>
-            <td>3.</td>
-            <td>Kashyap patel</td>
-            <td>design Logo for related to the music app</td>
-            <td>5000rs.</td>
-            <td><input type="submit" name="make_req" value="Request"></td>
-        </tr>
-        <tr>
-            <td>4.</td>
-            <td>Rushi pandya</td>
-            <td>android app like khatabook</td>
-            <td>10000rs.</td>
-            <td><input type="submit" name="make_req" value="Request"></td>
-        </tr>
-    </table>
+    <div class="container-fluid">
+        <table class="table">
+            <tr class="table-info">
+                <th>No.</th>
+                <th>task master</th>
+                <th> Description</th>
+                <th>cost</th>
+                <th>Make request</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>smit patel</td>
+                <td>data entry of library visiters</td>
+                <td>1000rs.</td>
+                <td><input class="btn-primary" type="submit" name="make_req" value="Request"></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>sandip patel</td>
+                <td>html template for the school management system</td>
+                <td>2000rs.</td>
+                <td><input class="btn-primary" type="submit" name="make_req" value="Request"></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Kashyap patel</td>
+                <td>design Logo for related to the music app</td>
+                <td>5000rs.</td>
+                <td><input class="btn-primary" type="submit" name="make_req" value="Request"></td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Rushi pandya</td>
+                <td>android app like khatabook</td>
+                <td>10000rs.</td>
+                <td><input class="btn-primary" type="submit" name="make_req" value="Request"></td>
+            </tr>
+        </table>
+    </div>
+
     <br><br>
     <footer>
         <div>

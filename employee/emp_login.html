@@ -3,6 +3,14 @@
 <head>
     <title>Employee login</title>
     <link rel="stylesheet" type="text/css" href="./css/general.css">
+    <link rel="stylesheet" type="text/css" herf="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
     <style>
         #image {
             background-image: url(./images/login_bg.jpg);
@@ -36,13 +44,45 @@
         form {
             background-color: #f2f2f2;
             height: 70%;
-            width: 30%;
+            width: 40%;
             box-shadow: 10px 10px 10px 10px;
             opacity: 0.5;
         }
         
         form:hover {
             opacity: 1.5;
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+        
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+        
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
         }
     </style>
 </head>
@@ -52,52 +92,63 @@
     <header>
         <h1 style="text-align: center;">Find your Work</h1>
     </header>
-    <div>
-        <nav>
-            <ul>
-                <li><a href="emp_index.html">Home</a></li>
-                <li><a href="emp_work.html">Tack Work</a></li>
-                <li><a href="emp_contactus.html">Contact Us</a></li>
-                <li><a href="emp_aboutus.html">about Us</a></li>
-                <li><a href="emp_profile.html ">Profile</a></li>
-                <li><a class="active" href="emp_login.html">login</a></li>
-                <li><a href="emp_signup.html">sign up</a></li>
-                <li><a href="emp_logout.html">Log out</a></li>
-            </ul>
+
+    <div class="container-fluid">
+        <nav class="nav flex-column">
+
+            <div class="col-sm-12">
+                <ul>
+                    <li><a class="nav-link" href="emp_index.html">Home</a></li>
+                    <li><a class="nav-link" href="emp_work.html">Tack Work</a></li>
+                    <li><a class="nav-link" href="emp_contactus.html">Contact Us</a></li>
+                    <li><a class="nav-link" href="emp_aboutus.html">about Us</a></li>
+                    <li><a class="nav-link" href="emp_profile.html ">Profile</a></li>
+                    <li><a class="nav-link active" href="emp_login.html">login</a></li>
+                    <li><a class="nav-link" href="emp_signup.html">sign up</a></li>
+                    <li><a class="nav-link" href="emp_logout.html">Log out</a></li>
+                </ul>
+            </div>
+
+
         </nav>
+
     </div>
+
     <br>
     <div align="center">
         <form method="#">
-            <table border="0">
+            <table border=" 0 ">
                 <tr>
-                    <td colspan="2">
-                        <h3 align="center">Employee login</h3>
+                    <td colspan="2 ">
+                        <h3 align="center ">Employee login</h3>
                     </td>
                 </tr>
+                <div>
+                    <tr>
+                        <td> Email : </td>
+                        <td><input type="text " name="username " id="username " required/></td>
+                    </tr>
+                    <tr>
+                        <td>Password : </td>
+                        <td><input type="password " name="password " id="password " required></td>
+                    </tr>
+                </div>
+
                 <tr>
-                    <td> Email : </td>
-                    <td><input type="text" name="username" id="username" required/></td>
-                </tr>
-                <tr>
-                    <td>Password : </td>
-                    <td><input type="password" name="password" id="password" required></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
+                    <td colspan="2 ">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="submit" onclick="login()" name="submit" value="Log in" /> &nbsp;&nbsp;
+                        <input class="btn btn-primary " type="submit " onclick="login() " name="submit " value="Log in " /> &nbsp;&nbsp;
                     </td>
                 </tr>
             </table>
 
             <br>
-            <button><a href="./../redirect.html">Navigation page</a></button>
+            <button><a href="./../redirect.html ">Navigation page</a></button>
         </form>
     </div>
 </body>
 
-<script src="./js/general.js">
+<script src="./js/general.js ">
 </script>
 
 </html>
