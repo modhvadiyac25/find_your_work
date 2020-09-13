@@ -3,6 +3,25 @@
 <head>
     <title>Employee Home</title>
     <link rel="stylesheet" type="text/css" href="./css/general.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#hide").click(function() {
+                $("p").hide(1000);
+            });
+            $("#show").click(function() {
+                $("p").show(1000);
+            });
+            $("button").click(function() {
+                $("#fd1").fadeOut();
+            });
+            $("#ani").click(function() {
+                $("#p1").css("color", "green").slideUp(5000).slideDown(6000);
+                $("div").animate(left: '200px');
+            });
+        });
+    </script>
 </head>
 <style>
     footer {
@@ -56,6 +75,33 @@
     <button type="submit" id="home_btn" onclick="showcontent()">Click here</button>
     <h1 class="text_color" id="welcome"></h1>
     <p class="text_color" id="page"></p>
+    <div>
+
+        <p style="color:white">
+            Hello there !! have greate day !! this jquary show/hide function
+        </p>
+        <button id="show">jquary show</button>
+        <button id="hide">jquary hide</button>
+        <br>
+        <button id="faded">Faded</button>
+        <div id="fd1" style="color: yellow;">fadede element displayed !!</div>
+        <p id="p1">slide up down</p>
+        <button id="ani">click</button>
+        <div style="width: 0px;
+        height: 0px;
+        border-right: 60px solid transparent;
+        border-top: 60px solid red;
+        border-left: 60px solid red;
+        border-bottom: 60px solid red;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;"></div>
+
+    </div>
+
+
+
     <footer>
         <div>
             <div>
@@ -75,5 +121,6 @@
     </div>
 </body>
 <script src="./js/general.js"></script>
+
 
 </html>
