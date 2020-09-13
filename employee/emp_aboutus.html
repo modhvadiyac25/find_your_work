@@ -7,6 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btn1").click(function() {
+                $("#append").append("this is about us page and you are appending content by append function").css("color", "red");
+            });
+            $("#btn2").click(function() {
+                $("#append").remove();
+            });
+            $("#btn3").click(function() {
+                $("h4").load("a.txt").css("color", "black");
+            });
+        });
+    </script>
 </head>
 <style>
     body {
@@ -32,6 +46,11 @@
             </ul>
         </nav>
     </div>
+    <button id="btn1" class="btn btn-primary">click to append text</button>
+    <button id="btn2" class="btn btn-primary">click to remove text</button>
+    <p id="append"></p>
+
+    <button id="btn3" class="btn btn-warning">load external file</button>
     <!--
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Launch demo modal </button>
     <div class="modal fade" id="exampleModal" tabindex="-1">
@@ -73,10 +92,7 @@
     </div>
 
     -->
-    <div class="container w-25 mx-auto">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Launch demo modal
-        </button>
-    </div>
+
 
 
     <footer>
