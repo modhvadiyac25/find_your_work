@@ -17,14 +17,24 @@
                 $("#append").remove();
             });
             $("#btn3").click(function() {
-                $("h4").load("a.txt").css("color", "black");
+                $("h4").load("emp_aboutus.html").css("color", "black");
+            });
+
+            $("#hide").click(function() {
+                $("p").hide(1000);
+            });
+            $("#show").click(function() {
+                $("p").show(1000);
+            });
+            $("#button").click(function() {
+                $("#fd1").fadeOut();
             });
         });
     </script>
 </head>
 <style>
     body {
-        background-color: lightgray;
+        background-color: lightblue;
     }
 </style>
 
@@ -46,11 +56,27 @@
             </ul>
         </nav>
     </div>
+
     <button id="btn1" class="btn btn-primary">click to append text</button>
     <button id="btn2" class="btn btn-primary">click to remove text</button>
     <p id="append"></p>
+    <hr>
 
+    <p style="color:black">
+        Hello there !! have greate day !! this jquary show/hide function
+    </p>
+    <br>
+    <button class="btn btn-primary" id="show">jquary show</button>
+    <button class="btn btn-primary" id="hide">jquary hide</button>
+    <br>
+    <hr>
+    <button class="btn btn-primary" id="button">Faded</button>
+    <br>
+    <div id="fd1" style="color: red;">fadede element displayed !!</div>
+    <br>
+    <hr>
     <button id="btn3" class="btn btn-warning">load external file</button>
+    <hr>
     <!--
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Launch demo modal </button>
     <div class="modal fade" id="exampleModal" tabindex="-1">
