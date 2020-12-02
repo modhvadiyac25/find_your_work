@@ -1,0 +1,90 @@
+<div id="image">
+    <header>
+        <h1 style="text-align: center;">Find your Work</h1>
+    </header>
+
+    <div class="container-fluid">
+        <nav class="nav flex-column">
+
+            <div class="col-sm-12">
+                <ul>
+                    <li><a class="nav-link" href="userHome">Home</a></li>
+                    <li><a class="nav-link " href="userTakework">Take Work</a></li>
+                    <li><a class="nav-link" href="userContactus">Contact Us</a></li>
+                    <li><a class="nav-link" href="userAboutus">about Us</a></li>
+                    <li><a class="nav-link" href="userProfile">Profile</a></li>
+                    <li><a class="nav-link active" href="login">login</a></li>
+                    <li><a class="nav-link" href="signup">sign up</a></li>
+                    <li><a class="nav-link" href=" " (click)="onLogout()">Log out</a></li>
+                </ul>
+            </div>
+
+
+        </nav>
+
+    </div>
+
+    <br>
+    <div align="center">
+
+
+        <form #signInForm="ngForm" (ngSubmit)=" signInForm.valid && onLogin(signInForm)">
+            <table border=" 0 ">
+                <tr>
+                    <td colspan="2 ">
+                        <h3 align="center ">Employee login</h3>
+                    </td>
+                </tr>
+                <div>
+                    <tr>
+                        <td> <label>Email :</label> </td>
+                        <td><input type="text" name="email" #email="ngModel" [(ngModel)]="model.email" [pattern]="emailRegex" required [ngClass]="{'invalid-textbox' : signInForm.submitted && !email.valid}">
+                            <div *ngIf="signInForm.submitted && email.errors?.pattern">
+                                <label id="valid" class="validation-message">  Invalide Email Address !!</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Password :</label> </td>
+                        <td><input type="password" name="password" #password="ngModel" [(ngModel)]="model.password" palceholder="password" required minlength="5" [ngClass]="{'invalid-textbox' : signInForm.submitted && !password.valid}"><br/>
+                            <div *ngIf="signInForm.submitted && !password.valid">
+                                <label id="valid" class="validation-message">Password must be greater then 5 characters</label></div>
+                        </td>
+                    </tr>
+                </div>
+                <tr>
+                    <td colspan="2 ">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-primary" input type="submit" name="login" value="sign in"> Sign In</button>&nbsp;&nbsp;
+                    </td>
+
+
+            </table>
+
+            <br>
+        </form>
+        <div class="alert " *ngIf="serverErrorMsg ">
+            {{serverErrorMsg}}
+        </div>
+    </div>
+
+</div>
+<!--<script src="./js/general.js ">
+</script>
+-->
+
+<!-- <form #signInForm="ngForm" (ngSubmit)=" signInForm.valid && onLogin(signInForm)">
+        <label>Email : </label>
+        <input type="text" name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="email" [pattern]="emailRegex" required [ngClass]="{'invalid-textbox' : signInForm.submitted && !email.valid}">
+        <div *ngIf="signInForm.submitted && email.errors?.pattern">
+            <label class="validation-message">  Invalide Email Address !!</label>
+        </div>
+        <label>Password : </label>
+        <input type="password" name="password" #password="ngModel" [(ngModel)]="model.password" palceholder="password" required minlength="5" [ngClass]="{'invalid-textbox' : signInForm.submitted && !password.valid}"><br/>
+        <div *ngIf="signInForm.submitted && !password.valid">
+            <label class="validation-message">Password must be greater then 5 characters</label></div>
+        <input type="submit" name="login" value="sign in">
+    </form>
+    <div class="alert" *ngIf="serverErrorMsg">
+        {{serverErrorMsg}}
+    </div>-->

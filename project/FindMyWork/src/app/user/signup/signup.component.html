@@ -1,0 +1,123 @@
+<header>
+    <h1 style="text-align: center;">Find your Work</h1>
+</header>
+<div class="container-fluid">
+    <nav class="nav flex-column">
+        <div class="col-sm-12">
+            <ul>
+                <li><a class="nav-link" href="userHome">Home</a></li>
+                <li><a class="nav-link " href="userTakework">Take Work</a></li>
+                <li><a class="nav-link" href="userContactus">Contact Us</a></li>
+                <li><a class="nav-link" href="userAboutus">about Us</a></li>
+                <li><a class="nav-link" href="userProfile">Profile</a></li>
+                <li><a class="nav-link " href="login">login</a></li>
+                <li><a class="nav-link active" href="signup">sign up</a></li>
+                <li><a class="nav-link" href=" " (click)="onLogout()">Log out</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</div>
+<br>
+
+<div align="center">
+    <form #signUpForm="ngForm" (ngSubmit)="onSubmitSignup(signUpForm)">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <h3 align="center">Employee sign up</h3>
+                </td>
+            </tr>
+            <tr>
+                <td><label>First name : </label></td>
+                <td><input type="text" #firstname="ngModel" [(ngModel)]="userservice.selectUser.firstname" name="firstname" required/><br/></td>
+            </tr>
+
+            <tr>
+                <td><label>Last name : </label></td>
+                <td><input type="text" #lastname="ngModel" [(ngModel)]="userservice.selectUser.lastname" name="lastname" required><br/></td>
+            </tr>
+
+            <tr>
+                <td><label>Mobile no. : </label></td>
+                <td><input type="tel" #mobile_no="ngModel" [(ngModel)]="userservice.selectUser.mobile_no" minlength="10" name="mobile_no" required><br>
+                    <div id="valid" *ngIf="signUpForm.submitted && !mobile_no.valid">
+                        <label class="validation-message">  Invalide mobile no !!</label>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Email : </label></td>
+                <td><input type="email" #email="ngModel" [(ngModel)]="userservice.selectUser.email" name="email" [pattern]="emailRegex" required> <br>
+                    <div id="valid" *ngIf="signUpForm.submitted && email.errors?.pattern">
+                        <label class="validation-message">  Invalide Email Address !!</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Password : </label></td>
+                <td><input type="password" #password="ngModel" [(ngModel)]="userservice.selectUser.password" minlength="5" name="password" required><br/>
+                    <div *ngIf="signUpForm.submitted && !password.valid">
+                        <label id="valid" class="validation-message">Password must be greater then 5 characters</label>
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td><label>Confirm Password : </label></td>
+                <td><input type="password" name="password" minlength="5" required></td>
+                <div *ngIf="signUpForm.submitted && !password.valid">
+                    <label id="valid" class="validation-message">Password must be greater then 5 characters</label>
+                </div>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="btn btn-primary" type="submit">Sign up</button>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--    <button class=""><a href="./../redirect.html">Navigation page</a></button>
+        --></form>
+</div>
+<div class="succss" *ngIf="successmsg">
+    Registered succesfully !!
+</div>
+<div class="salert" *ngIf="serverErrormsg">
+    {{serverErrormsg}}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<h1>sign up </h1>
+<form #signUpForm="ngForm" (ngSubmit)="onSubmitSignup(signUpForm)">
+    <label> firstname :</label>
+    <input type="text" #firstname="ngModel" value="smit" [(ngModel)]="userservice.selectUser.firstname" name="firstname" required/><br/>
+    <label> lastname :</label>
+    <input type="text" #lastname="ngModel" value="patel" [(ngModel)]="userservice.selectUser.lastname" name="lastname" required><br/>
+    <label> mobile_no :</label>
+    <input type="tel" #mobile_no="ngModel" value="9876545678" [(ngModel)]="userservice.selectUser.mobile_no" name="mobile_no" required><br>
+    <label>email :</label>
+    <input type="email" #email="ngModel" value="smit@gmail.com" [(ngModel)]="userservice.selectUser.email" name="email" required> <br>
+    <label>password : </label>
+    <input type="password" #password="ngModel" value="12345" [(ngModel)]="userservice.selectUser.password" name="password" required><br/>
+    <button class="btn btn-primary" type="submit">Sign up</button>
+</form>
+<div class="succss" *ngIf="successmsg">
+    Registered succesfully !!
+</div>
+<div class="salert" *ngIf="serverErrormsg">
+    {{serverErrormsg}}
+</div>-->

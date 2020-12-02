@@ -1,0 +1,60 @@
+<header>
+    <h1 style="text-align: center;">Find your Work</h1>
+</header>
+<div>
+    <nav>
+        <ul>
+            <li><a class="nav-link" href="userHome">Home</a></li>
+            <li><a class="nav-link " href="userTakework">Take Work</a></li>
+            <li><a class="nav-link" href="userContactus">Contact Us</a></li>
+            <li><a class="nav-link" href="userAboutus">about Us</a></li>
+            <li><a class="nav-link active" href="userProfile">Profile</a></li>
+            <li><a class="nav-link " href="login">login</a></li>
+            <li><a class="nav-link" href="signup">sign up</a></li>
+            <li><a class="nav-link" href=" " (click)="onLogout()">Log out</a></li>
+        </ul>
+    </nav>
+    <br><br>
+    <h1 align="center">Profile</h1>
+    <br><br>
+    <div *ngIf="userDetails" class="container-fluid">
+        <table class="table">
+            <tr class="table-info">
+                <td colspan="2"><label text-align="center">Profile</label></td>
+            </tr>
+            <tr>
+                <td>First name </td>
+                <td>{{userDetails.firstname}}</td>
+            </tr>
+            <tr>
+                <td>Last name </td>
+                <td>{{userDetails.lastname}}</td>
+            </tr>
+            <tr>
+                <td>mobile_no</td>
+                <td>{{userDetails.mobile_no}}</td>
+            </tr>
+            <tr>
+                <td>email </td>
+                <td>{{userDetails.email}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div *ngIf="userDetails" class="container-fluid"></div>
+
+<!--
+<p>First name </p>
+<p>{{userDetails.firstname}}</p>
+
+<p>First name </p>
+<p>{{userDetails.lastname}}</p>
+
+<p>First name </p>
+<p>{{userDetails.mobile_no}}</p>
+
+<p>First name </p>
+<p>{{userDetails.email}}</p>
+<button typr="submit" (click)="onLogout()">Logout</button>
+</div>
+-->
